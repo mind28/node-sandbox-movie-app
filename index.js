@@ -77,5 +77,7 @@ app.get('/users', (req, res) => {
 
 
 // Serve app
-const PORT = process.env.PORT || 8000
-app.listen(PORT, () => console.log(`Server started on PORT: ${PORT}`))
+const port = process.env.PORT || 8080;
+app.listen(port, '0.0.0.0',() => {
+ console.log('Listening on Port ' + port);
+});
