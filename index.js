@@ -23,8 +23,7 @@ const res = require('express/lib/response');
 const app = express()
 
 // Connect to Mongo
-const connectDB = require('./config/db')
-connectDB()
+mongoose.connect( process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // CORS
 const cors = require('cors');
